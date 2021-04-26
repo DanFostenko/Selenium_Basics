@@ -1,0 +1,39 @@
+/*XPath elements*/
+https://en.wikipedia.org/wiki/Main_Page
+/html/body/div/a
+//body//a
+//div/div//a
+//input[@name='search']
+//a[@class='mw-wiki-logo']
+//div[@class='portal' and @role='navigation']
+//div[@class='portal' and @role='navigation']//div[@class='body']
+//div[@class='portal' and @role='navigation']//div[@class='body']/ul/li
+//div[@class='portal' and @role='navigation']//div[@class='body']/ul/li[@id='n-shoplink']
+//*[@id='searchInput']
+//*[@id='simpleSearch']/*	/*все элементы под уровнем simpleSearch*/
+//div[@id='p-search']/*/div//input[@class='searchButton']
+//form[@id='searchform']
+//form[@id='searchform']//input[2]
+//form[@id='searchform']//input[1]/.	/*текущей узел*/
+//table[1]/.//tr	/*искать элемент, начиная с данного узла*/
+//form[@id='searchform']//input[1]/..	/*на уровень выше*/
+//form[@id='searchform']//input[1]/../input[3]
+//table[id='customers'//tr[3]/td[2]
+
+/*XPath Axes*/
+//input[@id='searchInput']/ancestor::* /*все предки определенного элемента*/
+//input[@id='searchInput']/ancestor::form /*вышестоящий элемент form*/
+//input[@id='searchInput']/ancestor::*[@id='searchform'] /*вышестоящий элемент с атрибутом id*/
+//input[@id='searchInput']/ancestor-or-self /*не только предки, но и сам элемент*/
+//input[@id='searchInput']/following-sibling /*соседний элемент*/
+//input[@id='searchInput']/following-sibling::* /*соседний элемент ниже данного*/
+//input[@id='searchButton']/preceding-sibling /*соседний элемент на том же уровне*/
+//input[@id='searchButton']/parent::div /*возвращает родительский элемент */
+
+/*XPath Functions*/
+//form[@id='searchform']//input[last()] /*возвращает последний элемент*/
+//a[text()='View source']
+//button[contains(@class,'settings')] /*найти кнопку, класс которой содержит текст 'settings' */
+//p[contains(text(), 'picture')]
+//input[contains(@title, 'Go to')]
+//input[starts-with(@title, 'Go to')] /*объект input, title которого начинается с 'Go to' */
